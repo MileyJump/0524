@@ -13,6 +13,8 @@
 		B01C97802C021E6D003C2368 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B01C977F2C021E6D003C2368 /* Base */; };
 		B01C97822C021E6E003C2368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B01C97812C021E6E003C2368 /* Assets.xcassets */; };
 		B01C97852C021E6E003C2368 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B01C97842C021E6E003C2368 /* Base */; };
+		B01C978D2C021FC4003C2368 /* ShopingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C978C2C021FC4003C2368 /* ShopingListTableViewCell.swift */; };
+		B01C978F2C021FD9003C2368 /* ShopingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C978E2C021FD9003C2368 /* ShopingListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B01C97812C021E6E003C2368 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B01C97842C021E6E003C2368 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B01C97862C021E6E003C2368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B01C978C2C021FC4003C2368 /* ShopingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopingListTableViewCell.swift; sourceTree = "<group>"; };
+		B01C978E2C021FD9003C2368 /* ShopingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopingListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,8 @@
 				B01C977A2C021E6D003C2368 /* SceneDelegate.swift */,
 				B01C977C2C021E6D003C2368 /* ViewController.swift */,
 				B01C977E2C021E6D003C2368 /* Main.storyboard */,
+				B01C978E2C021FD9003C2368 /* ShopingListTableViewController.swift */,
+				B01C978C2C021FC4003C2368 /* ShopingListTableViewCell.swift */,
 				B01C97812C021E6E003C2368 /* Assets.xcassets */,
 				B01C97832C021E6E003C2368 /* LaunchScreen.storyboard */,
 				B01C97862C021E6E003C2368 /* Info.plist */,
@@ -138,6 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B01C978F2C021FD9003C2368 /* ShopingListTableViewController.swift in Sources */,
+				B01C978D2C021FC4003C2368 /* ShopingListTableViewCell.swift in Sources */,
 				B01C977D2C021E6D003C2368 /* ViewController.swift in Sources */,
 				B01C97792C021E6D003C2368 /* AppDelegate.swift in Sources */,
 				B01C977B2C021E6D003C2368 /* SceneDelegate.swift in Sources */,
@@ -306,9 +314,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.miley.-524";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -333,9 +345,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.miley.-524";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
