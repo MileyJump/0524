@@ -29,9 +29,28 @@ class ShopingListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-        print("dd")
         tableView.rowHeight = 60
+        addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func addButtonTapped(){
+        guard let text = addTextField.text else { return }
+        list.append(ShopingList(checkButton: false, checkList: text, starButton: false))
         
+        addTextField.text = ""
+        
+        tableView.reloadData()
+    }
+    @objc func checkButtonTapped(_ sender: UIButton){
+        list[sender.tag].checkButton.toggle()
+        tableView.reloadData()
+        
+    }
+    @objc func starButtonTapped(_ sender: UIButton) {
+        list[sender.tag].starButton.toggle()
+        
+        print(sender.tag)
+        tableView.reloadData()
     }
     
     func setUpUI(){
@@ -54,17 +73,40 @@ class ShopingListTableViewController: UITableViewController {
         list.count
     }
     
-    
-    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShopingTableViewCell", for: indexPath) as! ShopingListTableViewCell
+        let data = list[indexPath.row]
+        
+        let checkname = data.checkButton ? "checkmark.square.fill" : "checkmark.square"
+        let checkimage = UIImage(systemName: checkname)
+        cell.checkButton.setImage(checkimage, for: .normal)
+        cell.checkButton.tag = indexPath.row
+        cell.checkButton.addTarget(self, action: #selector(checkButtonTapped), for: .touchUpInside)
+        
+        cell.checkListLabel.text = data.checkList
+        
+        let starname = data.starButton ? "star.fill" : "star"
+        let starImage = UIImage(systemName: starname)
+        
+        cell.starButton.setImage(starImage, for: .normal)
+        cell.starButton.tag = indexPath.row
+        cell.starButton.addTarget(self, action: #selector(starButtonTapped), for: .touchUpInside)
+        
+        
+        
         cell.backgroundCellView?.backgroundColor = .lightGray.withAlphaComponent(0.2)
         cell.backgroundCellView?.layer.cornerRadius = 8
         cell.starButton.tintColor = .black
         cell.checkButton.tintColor = .black
               
-//        cell.
+        
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        list.remove(at: indexPath.row)
+        tableView.reloadData()
+        
+    }
 }
