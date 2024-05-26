@@ -201,11 +201,8 @@ struct RestaurantList {
             type: 300, heart: false
         )
     ]
-//    var restaurantFilter: [Restaurant] = []
+    var restaurantFilter: [Restaurant] = []
 }
-
-
-
 
 
 class RestaurantTableViewController: UITableViewController {
@@ -220,6 +217,46 @@ class RestaurantTableViewController: UITableViewController {
         tableView.rowHeight = 450
         tableView.separatorStyle = .none
         setupUI()
+        restaurantList.restaurantFilter = restaurantList.restaurantArray
+    }
+    
+    
+    @IBAction func searchTextField(_ sender: UITextField) {
+        guard let searchText = searchTextField.text else { return }
+        searFilter(for: searchText)
+        tableView.reloadData()
+    }
+    
+    
+    func searFilter(for searchText: String) {
+        
+        // 🔍 반복문(for-in)을 활용한 검색 기능 🔍
+        
+        if restaurantList.restaurantFilter.isEmpty {
+            restaurantList.restaurantFilter = restaurantList.restaurantArray
+        } else {
+            
+            var filterArray: [Restaurant] = []
+            
+            for filter in restaurantList.restaurantArray {
+                if filter.name.contains(searchText) || filter.address.contains(searchText) || filter.category.contains(searchText) || filter.phoneNumber.contains(searchText) || filter.price.formatted().contains(searchText) || filter.type.formatted().contains(searchText) {
+                    filterArray.append(filter)
+                }
+            }
+            restaurantList.restaurantFilter = filterArray
+        }
+        
+        // 🔍 클로저를 활용한 검색 기능 🔍
+        
+//        if searchText.isEmpty {
+//            restaurantList.restaurantFilter = restaurantList.restaurantArray
+//        } else {
+//            restaurantList.restaurantFilter = restaurantList.restaurantArray.filter{ restaurant in
+//                return restaurant.name.contains(searchText) || restaurant.category.contains(searchText) || restaurant.address.contains(searchText) || restaurant.phoneNumber.contains(searchText) || restaurant.price.formatted().contains(searchText)
+//            }
+//        }
+        
+        tableView.reloadData()
     }
     
     func setupUI(){
@@ -228,38 +265,31 @@ class RestaurantTableViewController: UITableViewController {
         
         searchTextField.backgroundColor = .clear
         searchTextField.borderStyle = .none
-        searchTextField.placeholder = "검색해보세요"
+        searchTextField.placeholder = "Search for it!! "
     }
     
     
     
     @IBAction func keyBoardEnter(_ sender: UITextField) {
         view.endEditing(true)
-        guard let searchText = searchTextField.text else { return }
-        
     }
-    
-   
     
     
     @objc func heartButtonTapped(sender: UIButton){
         print(sender.tag)
-        restaurantList.restaurantArray[sender.tag].heart.toggle()
+        restaurantList.restaurantFilter[sender.tag].heart.toggle()
     
-//        tableView.reloadData()
         tableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
-        
-        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        restaurantList.restaurantArray.count
+        restaurantList.restaurantFilter.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantTableViewCell", for: indexPath) as! RestaurantTableViewCell
         
-        let restaurant = restaurantList.restaurantArray[indexPath.row]
+        let restaurant = restaurantList.restaurantFilter[indexPath.row]
         
         // 이미지
         let image = restaurant.image
@@ -308,9 +338,11 @@ class RestaurantTableViewController: UITableViewController {
         cell.heartButton.addTarget(self, action: #selector(heartButtonTapped), for: .touchUpInside)
         cell.heartButton.tag = indexPath.row
         
-        let heartButtonImage = restaurantList.restaurantArray[indexPath.row].heart ? "heart.fill" : "heart"
+        let heartButtonImage = restaurantList.restaurantFilter[indexPath.row].heart ? "heart.fill" : "heart"
         cell.heartButton.setImage(UIImage(systemName: heartButtonImage), for: .normal)
         
         return cell
     }
+    
 }
+

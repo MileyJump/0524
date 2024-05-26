@@ -156,9 +156,9 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nW-pU-pC0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-320" y="482"/>
+            <point key="canvasLocation" x="-1810" y="467"/>
         </scene>
-        <!--Travel Table View Controller-->
+        <!--SeSAC TRAVEL-->
         <scene sceneID="V2u-7d-LFs">
             <objects>
                 <tableViewController id="1f5-M6-SfB" customClass="TravelTableViewController" customModule="_524" customModuleProvider="target" sceneMemberID="viewController">
@@ -166,29 +166,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="bPj-Ka-912">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <navigationBar contentMode="scaleToFill" largeTitles="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbR-Ki-Q9q">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="44"/>
-                                    <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <items>
-                                        <navigationItem title="SeSAC TRAVEL" id="VoK-pY-Rlw"/>
-                                    </items>
-                                </navigationBar>
-                            </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            <constraints>
-                                <constraint firstItem="rbR-Ki-Q9q" firstAttribute="top" secondItem="bPj-Ka-912" secondAttribute="top" id="2Kk-MD-Y3l"/>
-                                <constraint firstAttribute="bottom" secondItem="rbR-Ki-Q9q" secondAttribute="bottom" id="AcE-Cb-F3Q"/>
-                                <constraint firstAttribute="trailing" secondItem="rbR-Ki-Q9q" secondAttribute="trailing" id="EV7-qT-WcK"/>
-                                <constraint firstItem="rbR-Ki-Q9q" firstAttribute="leading" secondItem="bPj-Ka-912" secondAttribute="leading" id="tyF-Bp-28z"/>
-                            </constraints>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TravelTableViewCell" rowHeight="519" id="N2i-Hs-w4P" customClass="TravelTableViewCell" customModule="_524" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="393" height="519"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="519"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="N2i-Hs-w4P" id="5Qi-LI-omU">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="519"/>
@@ -201,7 +181,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2024 Nems" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbq-lf-rAs">
-                                            <rect key="frame" x="36" y="356" width="237" height="20.333333333333314"/>
+                                            <rect key="frame" x="36" y="356" width="321" height="20.333333333333314"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -221,7 +201,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="hvA-jO-SL6" firstAttribute="top" secondItem="5Qi-LI-omU" secondAttribute="topMargin" constant="8" id="3V0-gv-ygz"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="fbq-lf-rAs" secondAttribute="trailing" constant="100" id="69B-tM-GsY"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="fbq-lf-rAs" secondAttribute="trailing" constant="16" id="69B-tM-GsY"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="D4E-lw-QXF" secondAttribute="trailing" constant="16" id="9w5-3F-aod"/>
                                         <constraint firstItem="hvA-jO-SL6" firstAttribute="leading" secondItem="5Qi-LI-omU" secondAttribute="leadingMargin" constant="16" id="AOt-mr-8IW"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="hvA-jO-SL6" secondAttribute="trailing" constant="16" id="HfJ-jb-E2F"/>
@@ -246,10 +226,11 @@
                             <outlet property="delegate" destination="1f5-M6-SfB" id="KTa-FY-hvX"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="SeSAC TRAVEL" id="t4P-gN-fjd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4mu-cG-hjH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="568.70229007633588" y="478.87323943661977"/>
+            <point key="canvasLocation" x="1495.4198473282443" y="478.87323943661977"/>
         </scene>
         <!--Restaurant Table View Controller-->
         <scene sceneID="kdA-DD-6JY">
@@ -276,6 +257,7 @@
                                             <textInputTraits key="textInputTraits"/>
                                             <connections>
                                                 <action selector="keyBoardEnter:" destination="9tf-YY-gC5" eventType="editingDidEndOnExit" id="pQf-9e-fPR"/>
+                                                <action selector="searchTextField:" destination="9tf-YY-gC5" eventType="editingChanged" id="Bjc-FF-nJF"/>
                                             </connections>
                                         </textField>
                                     </subviews>
@@ -444,7 +426,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFL-4M-wfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1535.1145038167938" y="466.90140845070425"/>
+            <point key="canvasLocation" x="2461.8320610687024" y="466.90140845070425"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ujd-Wx-3vi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AR1-CD-7hj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gi9-It-6V9">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1f5-M6-SfB" kind="relationship" relationship="rootViewController" id="hKQ-k7-W3A"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pP6-jO-YqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="568.70229007633588" y="478.87323943661977"/>
         </scene>
     </scenes>
     <resources>
