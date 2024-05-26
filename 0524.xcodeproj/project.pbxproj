@@ -18,6 +18,8 @@
 		B08B04C92C02468A00467831 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B04C82C02468A00467831 /* TravelTableViewController.swift */; };
 		B08B04CB2C02469A00467831 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B04CA2C02469A00467831 /* TravelTableViewCell.swift */; };
 		B08B04CE2C024BE800467831 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B08B04CD2C024BE800467831 /* Kingfisher */; };
+		B0B85E522C02F8ED00889951 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B85E512C02F8ED00889951 /* RestaurantTableViewCell.swift */; };
+		B0B85E542C02F8FB00889951 /* RestaurantTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0B85E532C02F8FB00889951 /* RestaurantTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		B01C978E2C021FD9003C2368 /* ShopingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopingListTableViewController.swift; sourceTree = "<group>"; };
 		B08B04C82C02468A00467831 /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
 		B08B04CA2C02469A00467831 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
+		B0B85E512C02F8ED00889951 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		B0B85E532C02F8FB00889951 /* RestaurantTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 				B01C978C2C021FC4003C2368 /* ShopingListTableViewCell.swift */,
 				B08B04C82C02468A00467831 /* TravelTableViewController.swift */,
 				B08B04CA2C02469A00467831 /* TravelTableViewCell.swift */,
+				B0B85E532C02F8FB00889951 /* RestaurantTableViewController.swift */,
+				B0B85E512C02F8ED00889951 /* RestaurantTableViewCell.swift */,
 				B01C97812C021E6E003C2368 /* Assets.xcassets */,
 				B01C97832C021E6E003C2368 /* LaunchScreen.storyboard */,
 				B01C97862C021E6E003C2368 /* Info.plist */,
@@ -160,8 +166,10 @@
 			files = (
 				B01C978F2C021FD9003C2368 /* ShopingListTableViewController.swift in Sources */,
 				B08B04C92C02468A00467831 /* TravelTableViewController.swift in Sources */,
+				B0B85E542C02F8FB00889951 /* RestaurantTableViewController.swift in Sources */,
 				B08B04CB2C02469A00467831 /* TravelTableViewCell.swift in Sources */,
 				B01C978D2C021FC4003C2368 /* ShopingListTableViewCell.swift in Sources */,
+				B0B85E522C02F8ED00889951 /* RestaurantTableViewCell.swift in Sources */,
 				B01C977D2C021E6D003C2368 /* ViewController.swift in Sources */,
 				B01C97792C021E6D003C2368 /* AppDelegate.swift in Sources */,
 				B01C977B2C021E6D003C2368 /* SceneDelegate.swift in Sources */,
