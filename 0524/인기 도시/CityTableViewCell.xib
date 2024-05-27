@@ -49,35 +49,35 @@
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
                     </button>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qwm-6g-Lpg">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qwm-6g-Lpg">
                         <rect key="frame" x="32" y="59.666666666666664" width="16" height="15.66666666666665"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="qwm-6g-Lpg" secondAttribute="height" id="pBi-oC-id7"/>
                             <constraint firstAttribute="width" constant="16" id="qku-TA-wu5"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DVj-Ay-XCB">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DVj-Ay-XCB">
                         <rect key="frame" x="48" y="59.666666666666664" width="16" height="15.66666666666665"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="1tY-xz-3KR"/>
                             <constraint firstAttribute="width" constant="16" id="sxw-8K-Vac"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9mq-zX-Lsw">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9mq-zX-Lsw">
                         <rect key="frame" x="64" y="59.666666666666664" width="16" height="15.66666666666665"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="bft-ls-Rr7"/>
                             <constraint firstAttribute="width" constant="16" id="saI-Cz-kpH"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FxX-xJ-gJS">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FxX-xJ-gJS">
                         <rect key="frame" x="16" y="59.666666666666664" width="16" height="15.66666666666665"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="16" id="Shd-nr-8RC"/>
                             <constraint firstAttribute="width" secondItem="FxX-xJ-gJS" secondAttribute="height" id="qia-fl-aBB"/>
                         </constraints>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="w2o-hb-CKA">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="w2o-hb-CKA">
                         <rect key="frame" x="80" y="59.666666666666664" width="16" height="15.66666666666665"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="2QM-4l-zC4"/>
@@ -136,6 +136,6 @@
     </objects>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
-        <image name="star" catalog="system" width="128" height="116"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
     </resources>
 </document>

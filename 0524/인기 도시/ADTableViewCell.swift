@@ -19,9 +19,6 @@ class ADTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configureLayout()
-        
-        let color = UIColor()
-        self.backgroundColor = color.randomColor()
     }
     
     func configureLayout() {
@@ -29,12 +26,14 @@ class ADTableViewCell: UITableViewCell {
         adLabel.layer.borderColor = UIColor.black.cgColor
         adLabel.clipsToBounds = true
         adLabel.text = "AD"
-        adLabel.textColor = .black
-        adLabel.font = .systemFont(ofSize: 16)
+        adLabel.setUpLabelUI(fontSize: 16, colorName: .black)
         
         titleLabel.font = .boldSystemFont(ofSize: 18)
         
         layer.cornerRadius = 16
+        
+        let color = UIColor()
+        self.backgroundColor = color.randomColor()
         
     }
     

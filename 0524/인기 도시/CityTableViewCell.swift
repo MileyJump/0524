@@ -32,17 +32,22 @@ class CityTableViewCell: UITableViewCell {
         titleLabel.font = .boldSystemFont(ofSize: 18)
         titleLabel.textColor = .black
         
-        descriptionLabel.font = .systemFont(ofSize: 14)
-        descriptionLabel.textColor = .darkGray
+        descriptionLabel.setUpLabelUI(fontSize: 14, colorName: .darkGray)
         
-        saveLabel.font = .systemFont(ofSize: 13)
-        saveLabel.textColor = .lightGray
+        saveLabel.setUpLabelUI(fontSize: 13, colorName: .lightGray)
         
         travelImageView.backgroundColor = .darkGray
         travelImageView.layer.cornerRadius = 8
         travelImageView.contentMode = .scaleAspectFill
         
         likeButton.tintColor = .white
+        
+        scopeButton1.tintColor = .lightGray
+        scopeButton2.tintColor = .lightGray
+        scopeButton3.tintColor = .lightGray
+        scopeButton4.tintColor = .lightGray
+        scopeButton5.tintColor = .lightGray
+        
     }
     
     
@@ -58,17 +63,17 @@ class CityTableViewCell: UITableViewCell {
         
         let url = URL(string: image)
         travelImageView.kf.setImage(with: url)
-        let starImage = UIImage(systemName: "star.fill")
-        let emptyStarImage = UIImage(systemName: "star")
+//        let starImage = UIImage(systemName: "star.fill")
+//        let emptyStarImage = UIImage(systemName: "star")
         
         let likeImage = like ? "heart.fill" : "heart"
         likeButton.setImage(UIImage(systemName: likeImage), for: .normal)
         
         // 평점 반복문 사용
-        var starButton = [scopeButton1, scopeButton2, scopeButton3, scopeButton4, scopeButton5]
+        let starButton = [scopeButton1, scopeButton2, scopeButton3, scopeButton4, scopeButton5]
         
         for (index, button) in starButton.enumerated() { 
-            button?.image = index < Int(grade) ? starImage : emptyStarImage
+            button?.tintColor = index < Int(grade) ? .systemYellow : .lightGray
         }
        
         // 평점 스위치문으로 사용
