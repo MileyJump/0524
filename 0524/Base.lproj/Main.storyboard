@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9tf-YY-gC5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qjX-vH-3mo">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1201" y="482"/>
+            <point key="canvasLocation" x="-3585" y="467"/>
         </scene>
         <!--Shoping List Table View Controller-->
         <scene sceneID="PoT-VK-TUW">
@@ -156,7 +156,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nW-pU-pC0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1810" y="467"/>
+            <point key="canvasLocation" x="-346" y="479"/>
         </scene>
         <!--SeSAC TRAVEL-->
         <scene sceneID="V2u-7d-LFs">
@@ -193,7 +193,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4E-lw-QXF">
-                                            <rect key="frame" x="315" y="479" width="42" height="21"/>
+                                            <rect key="frame" x="315" y="413.33333333333331" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -206,7 +206,7 @@
                                         <constraint firstItem="hvA-jO-SL6" firstAttribute="leading" secondItem="5Qi-LI-omU" secondAttribute="leadingMargin" constant="16" id="AOt-mr-8IW"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="hvA-jO-SL6" secondAttribute="trailing" constant="16" id="HfJ-jb-E2F"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="1JP-2R-lrg" secondAttribute="trailing" constant="16" id="TAG-H3-iAu"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="D4E-lw-QXF" secondAttribute="bottom" constant="8" id="aPs-Fv-OwZ"/>
+                                        <constraint firstItem="D4E-lw-QXF" firstAttribute="top" secondItem="1JP-2R-lrg" secondAttribute="bottom" constant="8" id="YNe-xT-kba"/>
                                         <constraint firstItem="1JP-2R-lrg" firstAttribute="leading" secondItem="5Qi-LI-omU" secondAttribute="leadingMargin" constant="16" id="moD-VX-dWK"/>
                                         <constraint firstItem="fbq-lf-rAs" firstAttribute="top" secondItem="hvA-jO-SL6" secondAttribute="bottom" constant="16" id="niG-ae-GCF"/>
                                         <constraint firstItem="1JP-2R-lrg" firstAttribute="top" secondItem="fbq-lf-rAs" secondAttribute="bottom" constant="8" id="q06-JD-EYi"/>
@@ -230,9 +230,40 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4mu-cG-hjH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1495.4198473282443" y="478.87323943661977"/>
+            <point key="canvasLocation" x="4747" y="217"/>
         </scene>
-        <!--Restaurant Table View Controller-->
+        <!--도시 상세 정보-->
+        <scene sceneID="YXc-AI-E9H">
+            <objects>
+                <viewController id="OAL-c1-7xh" customClass="CityViewController" customModule="_524" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fBW-wS-zRJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MdA-r3-fQv">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bAw-2T-10u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bAw-2T-10u" firstAttribute="bottom" secondItem="MdA-r3-fQv" secondAttribute="bottom" id="8Uu-tJ-dyj"/>
+                            <constraint firstItem="MdA-r3-fQv" firstAttribute="top" secondItem="bAw-2T-10u" secondAttribute="top" id="EZv-aF-nwf"/>
+                            <constraint firstItem="bAw-2T-10u" firstAttribute="trailing" secondItem="MdA-r3-fQv" secondAttribute="trailing" id="foT-k5-JqX"/>
+                            <constraint firstItem="MdA-r3-fQv" firstAttribute="leading" secondItem="bAw-2T-10u" secondAttribute="leading" id="jU3-gE-twL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="도시 상세 정보" id="QCy-Ue-E6H"/>
+                    <connections>
+                        <outlet property="cityTableView" destination="MdA-r3-fQv" id="mii-ao-haU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dq1-ns-0bS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4689.3129770992364" y="974.64788732394368"/>
+        </scene>
+        <!--식당-->
         <scene sceneID="kdA-DD-6JY">
             <objects>
                 <tableViewController id="9tf-YY-gC5" customClass="RestaurantTableViewController" customModule="_524" customModuleProvider="target" sceneMemberID="viewController">
@@ -419,6 +450,7 @@
                             <outlet property="delegate" destination="9tf-YY-gC5" id="Z5r-wC-N47"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="식당" image="fork.knife.circle.fill" catalog="system" id="fFB-aR-LM7"/>
                     <connections>
                         <outlet property="searchTextField" destination="Nrr-r1-b0a" id="uLB-lD-vny"/>
                         <outlet property="searchView" destination="Mhz-2J-IXC" id="2oH-aS-HsW"/>
@@ -426,12 +458,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFL-4M-wfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2461.8320610687024" y="466.90140845070425"/>
+            <point key="canvasLocation" x="3763" y="-551"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--여행-->
         <scene sceneID="Ujd-Wx-3vi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AR1-CD-7hj" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="여행" image="camera.macro.circle.fill" catalog="system" id="uCy-cH-GfK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="gi9-It-6V9">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
@@ -444,11 +477,52 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pP6-jO-YqM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="568.70229007633588" y="478.87323943661977"/>
+            <point key="canvasLocation" x="3763" y="217"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="T1D-Fl-hln">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qjX-vH-3mo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p5U-Z3-JIt">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="AR1-CD-7hj" kind="relationship" relationship="viewControllers" id="UYR-R0-QKv"/>
+                        <segue destination="9tf-YY-gC5" kind="relationship" relationship="viewControllers" id="Twt-Ak-aat"/>
+                        <segue destination="tLl-hw-Bkw" kind="relationship" relationship="viewControllers" id="t8t-H7-02r"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKJ-AB-Vah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2835.8778625954196" y="974.64788732394368"/>
+        </scene>
+        <!--도시-->
+        <scene sceneID="KPc-H8-H0u">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tLl-hw-Bkw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="도시" image="building.2.crop.circle.fill" catalog="system" id="Foe-Pc-MMK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="htC-wf-0Lh">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OAL-c1-7xh" kind="relationship" relationship="rootViewController" id="1QO-2q-gFJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVR-wZ-TXr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3762.5954198473282" y="974.64788732394368"/>
         </scene>
     </scenes>
     <resources>
+        <image name="building.2.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="camera.macro.circle.fill" catalog="system" width="128" height="123"/>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
+        <image name="fork.knife.circle.fill" catalog="system" width="128" height="123"/>
         <image name="heart" catalog="system" width="128" height="107"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
