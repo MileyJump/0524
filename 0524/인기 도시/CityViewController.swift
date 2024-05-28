@@ -8,13 +8,17 @@
 import UIKit
 
 class CityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
+    
     @IBOutlet var cityTableView: UITableView!
     var travelList = TravelInfo().travel
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureTableView()
+    }
+    
+    func configureTableView() {
         // 관광지 셀 등록
         let cityXib = UINib(nibName: "CityTableViewCell", bundle: nil)
         cityTableView.register(cityXib, forCellReuseIdentifier: "CityTableViewCell")
@@ -28,8 +32,6 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
         cityTableView.dataSource = self
         
         cityTableView.rowHeight = 120
-        
-        
     }
     
     @objc func likeButtonTapped(_ sender: UIButton) {
@@ -43,19 +45,17 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cityCell = tableView.dequeueReusableCell(withIdentifier: "CityTableViewCell", for: indexPath) as! CityTableViewCell
         
-        let adCell = tableView.dequeueReusableCell(withIdentifier: "ADTableViewCell", for: indexPath) as! ADTableViewCell
-        
-        cityCell.configureCell(data: travelList[indexPath.row])
-        adCell.configureCell(data: travelList[indexPath.row])
-        
-        cityCell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
-        cityCell.likeButton.tag = indexPath.row
-        
-        if travelList[indexPath.row].ad! {
+        if let isAd = travelList[indexPath.row].ad, isAd {
+            let adCell = tableView.dequeueReusableCell(withIdentifier: ADTableViewCell.identifier, for: indexPath) as! ADTableViewCell
+            adCell.configureCell(data: travelList[indexPath.row])
             return adCell
         } else {
+            let cityCell = tableView.dequeueReusableCell(withIdentifier: CityTableViewCell.identifier, for: indexPath) as! CityTableViewCell
+            
+            cityCell.configureCell(data: travelList[indexPath.row])
+            cityCell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
+            cityCell.likeButton.tag = indexPath.row
             return cityCell
         }
     }

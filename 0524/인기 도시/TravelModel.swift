@@ -15,6 +15,32 @@ struct Travel {
     var like: Bool?
     var ad: Bool?
     
+    var titleDescription: String {
+        return title ?? ""
+    }
+    
+    var subtitleDescription: String {
+        return description ?? ""
+    }
+    
+    var descriptionLabel: String {
+        if let grade, let save {
+            return "(\(grade)) · 저장 \(save.formatted()) "
+        } else if let grade = grade {
+            return "(\(grade))"
+        } else if let save = save {
+            return "저장 \(save.formatted())"
+        } else {
+            return ""
+        }
+    }
+    
+    var cityImageURL: URL? {
+        guard let imageUrlString = travel_image else {
+            return nil
+        }
+        return URL(string: imageUrlString)
+    }
 }
 
 struct TravelInfo {
