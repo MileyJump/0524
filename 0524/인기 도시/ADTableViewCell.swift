@@ -32,6 +32,14 @@ class ADTableViewCell: UITableViewCell {
         
         layer.cornerRadius = 16
         
+        
+        //        self.backgroundColor = UIColor.randomColor()
+        
+        
+                // => UIColor 확장 했음. UITableViewCell는 UIView의 하위 클래스이고..
+                // UIKit 덕분에 UIView는 Color가를 쓸 수 있지 않나..? 그러면 TableViewCell도 UIColor를 쓸 수 있어야 하는거 아닌가..?  왜 인스턴스 찍어야 하는지..
+        //      self.backgroundColor = .blue => 여기서 blue가 UIColor인데 사용이 되지 않나?
+        
         let color = UIColor()
         self.backgroundColor = color.randomColor()
         

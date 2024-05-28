@@ -232,6 +232,60 @@
             </objects>
             <point key="canvasLocation" x="4747" y="217"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="16U-61-Apg">
+            <objects>
+                <viewController id="1qN-Xv-CRX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vjt-kD-Eev">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdp-6b-4ze">
+                                <rect key="frame" x="15" y="74" width="363" height="729"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZJA-wY-ER2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kdp-6b-4ze" firstAttribute="leading" secondItem="ZJA-wY-ER2" secondAttribute="leading" constant="15" id="477-fJ-gEB"/>
+                            <constraint firstItem="kdp-6b-4ze" firstAttribute="top" secondItem="ZJA-wY-ER2" secondAttribute="top" constant="15" id="D0H-re-vS0"/>
+                            <constraint firstItem="ZJA-wY-ER2" firstAttribute="trailing" secondItem="kdp-6b-4ze" secondAttribute="trailing" constant="15" id="EPF-HS-Zyq"/>
+                            <constraint firstItem="ZJA-wY-ER2" firstAttribute="bottom" secondItem="kdp-6b-4ze" secondAttribute="bottom" constant="15" id="oJ6-ae-OGA"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQF-t4-cn3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6665" y="-28"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="w6Y-O1-2wb">
+            <objects>
+                <viewController id="bcd-kM-LjG" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xHi-gx-LF5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yKi-Bn-zlk">
+                                <rect key="frame" x="15" y="74" width="363" height="729"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ibd-IO-W4V"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ibd-IO-W4V" firstAttribute="trailing" secondItem="yKi-Bn-zlk" secondAttribute="trailing" constant="15" id="3Ue-lw-xbK"/>
+                            <constraint firstItem="yKi-Bn-zlk" firstAttribute="top" secondItem="ibd-IO-W4V" secondAttribute="top" constant="15" id="Vx7-p1-jH2"/>
+                            <constraint firstItem="yKi-Bn-zlk" firstAttribute="leading" secondItem="ibd-IO-W4V" secondAttribute="leading" constant="15" id="dzA-Ct-GqF"/>
+                            <constraint firstItem="ibd-IO-W4V" firstAttribute="bottom" secondItem="yKi-Bn-zlk" secondAttribute="bottom" constant="15" id="obn-Qx-AUj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="prd-4c-pty" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7644" y="-28"/>
+        </scene>
         <!--도시 상세 정보-->
         <scene sceneID="YXc-AI-E9H">
             <objects>
@@ -485,6 +539,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qjX-vH-3mo" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="p5U-Z3-JIt">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -531,6 +586,12 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

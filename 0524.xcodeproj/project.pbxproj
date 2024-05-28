@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B005B2C22C05FB920095E7DD /* MagazineInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B005B2C12C05FB920095E7DD /* MagazineInfo.swift */; };
 		B01C97792C021E6D003C2368 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C97782C021E6D003C2368 /* AppDelegate.swift */; };
 		B01C977B2C021E6D003C2368 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C977A2C021E6D003C2368 /* SceneDelegate.swift */; };
 		B01C977D2C021E6D003C2368 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C977C2C021E6D003C2368 /* ViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B005B2C12C05FB920095E7DD /* MagazineInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagazineInfo.swift; sourceTree = "<group>"; };
 		B01C97752C021E6D003C2368 /* 0524.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 0524.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01C97782C021E6D003C2368 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B01C977A2C021E6D003C2368 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +69,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B005B2C52C0600B00095E7DD /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B0EDFEC32C04B94300EBBB79 /* UILabel+Extension.swift */,
+				B0EDFEC12C049FFC00EBBB79 /* UIColor+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		B01C976C2C021E6D003C2368 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +105,7 @@
 				B0EDFEB32C046C3400EBBB79 /* 식당조회 */,
 				B0EDFEB22C046BD500EBBB79 /* 여행프로젝트 */,
 				B0EDFEB42C046EE100EBBB79 /* 인기 도시 */,
+				B005B2C52C0600B00095E7DD /* Extension */,
 				B01C97832C021E6E003C2368 /* LaunchScreen.storyboard */,
 				B01C97812C021E6E003C2368 /* Assets.xcassets */,
 				B01C97862C021E6E003C2368 /* Info.plist */,
@@ -114,6 +126,7 @@
 		B0EDFEB22C046BD500EBBB79 /* 여행프로젝트 */ = {
 			isa = PBXGroup;
 			children = (
+				B005B2C12C05FB920095E7DD /* MagazineInfo.swift */,
 				B08B04CA2C02469A00467831 /* TravelTableViewCell.swift */,
 				B08B04C82C02468A00467831 /* TravelTableViewController.swift */,
 			);
@@ -140,8 +153,6 @@
 				B0EDFEB82C04756000EBBB79 /* CityTableViewCell.xib */,
 				B0EDFEBD2C0485D200EBBB79 /* ADTableViewCell.swift */,
 				B0EDFEBE2C0485D200EBBB79 /* ADTableViewCell.xib */,
-				B0EDFEC12C049FFC00EBBB79 /* UIColor+Extension.swift */,
-				B0EDFEC32C04B94300EBBB79 /* UILabel+Extension.swift */,
 			);
 			name = "인기 도시";
 			path = "인기 도시";
@@ -231,6 +242,7 @@
 				B0EDFEC42C04B94300EBBB79 /* UILabel+Extension.swift in Sources */,
 				B08B04C92C02468A00467831 /* TravelTableViewController.swift in Sources */,
 				B0EDFEC02C0485D200EBBB79 /* ADTableViewCell.swift in Sources */,
+				B005B2C22C05FB920095E7DD /* MagazineInfo.swift in Sources */,
 				B0EDFEBC2C04766D00EBBB79 /* TravelModel.swift in Sources */,
 				B0B85E542C02F8FB00889951 /* RestaurantTableViewController.swift in Sources */,
 				B08B04CB2C02469A00467831 /* TravelTableViewCell.swift in Sources */,
