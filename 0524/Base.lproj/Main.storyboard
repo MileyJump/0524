@@ -286,6 +286,63 @@
             </objects>
             <point key="canvasLocation" x="6486" y="975"/>
         </scene>
+        <!--인기 도시-->
+        <scene sceneID="3eL-zf-NuK">
+            <objects>
+                <viewController storyboardIdentifier="PopularCityViewController" id="NV5-Yk-xIM" customClass="PopularCityViewController" customModule="_524" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eqq-fL-Wfk">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="DL5-4u-Jdh">
+                                <rect key="frame" x="16" y="103" width="393" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="SKs-fX-QQH"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="NV5-Yk-xIM" id="2ct-iS-uVP"/>
+                                </connections>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="xxG-Ox-fHR">
+                                <rect key="frame" x="16" y="163" width="361" height="32"/>
+                                <segments>
+                                    <segment title="모두"/>
+                                    <segment title="국내"/>
+                                    <segment title="해외"/>
+                                </segments>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JDu-Wt-Ub3">
+                                <rect key="frame" x="0.0" y="210" width="393" height="559"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="SI4-4k-LFT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xxG-Ox-fHR" firstAttribute="top" secondItem="DL5-4u-Jdh" secondAttribute="bottom" constant="16" id="1G4-kY-z98"/>
+                            <constraint firstItem="DL5-4u-Jdh" firstAttribute="trailing" secondItem="SI4-4k-LFT" secondAttribute="trailing" constant="16" id="85A-eJ-vzx"/>
+                            <constraint firstItem="JDu-Wt-Ub3" firstAttribute="top" secondItem="xxG-Ox-fHR" secondAttribute="bottom" constant="16" id="CMM-hY-WHB"/>
+                            <constraint firstItem="SI4-4k-LFT" firstAttribute="trailing" secondItem="xxG-Ox-fHR" secondAttribute="trailing" constant="16" id="ENo-1w-qaq"/>
+                            <constraint firstItem="JDu-Wt-Ub3" firstAttribute="leading" secondItem="SI4-4k-LFT" secondAttribute="leading" id="Vr1-gb-MTa"/>
+                            <constraint firstItem="DL5-4u-Jdh" firstAttribute="leading" secondItem="SI4-4k-LFT" secondAttribute="leading" constant="16" id="Z65-xP-pYZ"/>
+                            <constraint firstItem="xxG-Ox-fHR" firstAttribute="leading" secondItem="SI4-4k-LFT" secondAttribute="leading" constant="16" id="aaQ-uj-A4u"/>
+                            <constraint firstItem="SI4-4k-LFT" firstAttribute="trailing" secondItem="JDu-Wt-Ub3" secondAttribute="trailing" id="fWu-zS-8nU"/>
+                            <constraint firstItem="SI4-4k-LFT" firstAttribute="bottom" secondItem="JDu-Wt-Ub3" secondAttribute="bottom" id="zG0-C3-5XQ"/>
+                            <constraint firstItem="DL5-4u-Jdh" firstAttribute="top" secondItem="SI4-4k-LFT" secondAttribute="top" id="zRa-FR-ggZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="인기 도시" id="jBT-GR-mpm"/>
+                    <connections>
+                        <outlet property="citySegmented" destination="xxG-Ox-fHR" id="ySt-ye-RCX"/>
+                        <outlet property="searchBar" destination="DL5-4u-Jdh" id="bWh-1m-A5q"/>
+                        <outlet property="tableView" destination="JDu-Wt-Ub3" id="h4w-gH-3bE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07e-dh-md5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4689.3129770992364" y="1750.7042253521129"/>
+        </scene>
         <!--도시 상세 정보-->
         <scene sceneID="YXc-AI-E9H">
             <objects>
@@ -547,6 +604,7 @@
                         <segue destination="AR1-CD-7hj" kind="relationship" relationship="viewControllers" id="UYR-R0-QKv"/>
                         <segue destination="9tf-YY-gC5" kind="relationship" relationship="viewControllers" id="Twt-Ak-aat"/>
                         <segue destination="tLl-hw-Bkw" kind="relationship" relationship="viewControllers" id="t8t-H7-02r"/>
+                        <segue destination="Pjj-SM-PaQ" kind="relationship" relationship="viewControllers" id="aod-ZF-7om"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKJ-AB-Vah" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -572,9 +630,29 @@
             </objects>
             <point key="canvasLocation" x="3762.5954198473282" y="974.64788732394368"/>
         </scene>
+        <!--인기 도시-->
+        <scene sceneID="By4-IP-Ptn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pjj-SM-PaQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="인기 도시" image="building.columns.circle.fill" catalog="system" id="81F-E8-a64"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EBk-IA-TPG">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="NV5-Yk-xIM" kind="relationship" relationship="rootViewController" id="5qF-wc-ZOw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oeI-HT-P9O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3762.5954198473282" y="1750.7042253521129"/>
+        </scene>
     </scenes>
     <resources>
         <image name="building.2.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="building.columns.circle.fill" catalog="system" width="128" height="123"/>
         <image name="camera.macro.circle.fill" catalog="system" width="128" height="123"/>
         <image name="checkmark.square" catalog="system" width="128" height="114"/>
         <image name="fork.knife.circle.fill" catalog="system" width="128" height="123"/>
