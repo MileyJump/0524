@@ -11,6 +11,7 @@ class PopularCityViewController: UIViewController {
     
     var list = CityInfo().city
     var filterList: [City] = []
+    lazy var segment = citySegmented.selectedSegmentIndex
     
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var citySegmented: UISegmentedControl!
@@ -22,30 +23,9 @@ class PopularCityViewController: UIViewController {
         configureUI()
         filterList = list
         citySegmented.addTarget(self, action: #selector(segmentedTapped), for: .valueChanged)
-        searchBar.searchTextField.addTarget(self, action: #selector(searchTextField), for: .editingChanged)
+ 
     }
-    
-    @objc func searchTextField() {
-        
-        guard let text = searchBar.text else { return }
-        print(text)
-        
-        var searchlist: [City] = []
-        
-        if text.isEmpty {
-            filterList = list
-            tableView.reloadData()
-        } else {
-            for item in list {
-                if item.city_name.contains(text) {
-                    searchlist.append(item)
-                }
-            }
-            filterList = searchlist
-            tableView.reloadData()
-        }
-    }
-    
+
     @objc func segmentedTapped(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
@@ -57,18 +37,19 @@ class PopularCityViewController: UIViewController {
         default:
             break
         }
+        
     }
     
     func perfomDomesticSegmentAction(){
         print(#function)
         var searchlist: [City] = []
-        
-        let segment = citySegmented.selectedSegmentIndex
-        
-        if segment == 0 {
+
+        if citySegmented.selectedSegmentIndex == 0 {
+            print("0번 클릭")
             filterList = list
             tableView.reloadData()
         } else if citySegmented.selectedSegmentIndex == 1 {
+            print("1번 클릭")
             for city in list {
                 if city.domestic_travel {
                     searchlist.append(city)
@@ -77,6 +58,7 @@ class PopularCityViewController: UIViewController {
             filterList = searchlist
             tableView.reloadData()
         } else if citySegmented.selectedSegmentIndex == 2 {
+            print("2번 클릭")
             for city in list {
                 if !city.domestic_travel {
                     searchlist.append(city)
@@ -111,4 +93,11 @@ extension PopularCityViewController: UITableViewDelegate, UITableViewDataSource 
         
         return cell
     }
+}
+
+
+extension PopularCityViewController: UISearchBarDelegate {
+    
+    
+    
 }
