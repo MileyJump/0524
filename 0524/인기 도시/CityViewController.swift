@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CityViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CityViewController: UIViewController {
     
     @IBOutlet var cityTableView: UITableView!
     var travelList = TravelInfo().travel
@@ -32,6 +32,10 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
         cityTableView.dataSource = self
         
         cityTableView.rowHeight = 120
+        
+        navigationItem.backButtonTitle = ""
+        
+        
     }
     
     @objc func likeButtonTapped(_ sender: UIButton) {
@@ -39,6 +43,11 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
         travelList[sender.tag].like?.toggle()
         cityTableView.reloadRows(at: [IndexPath(row: sender.tag, section: 0)], with: .automatic)
     }
+    
+    
+}
+
+extension CityViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         travelList.count
@@ -58,5 +67,24 @@ class CityViewController: UIViewController, UITableViewDelegate, UITableViewData
             cityCell.likeButton.tag = indexPath.row
             return cityCell
         }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        if let ad = travelList[indexPath.row].ad, ad {
+             let vc = storyboard?.instantiateViewController(withIdentifier: AdDetailViewController.indentifier) as! AdDetailViewController
+            let nvc = UINavigationController(rootViewController: vc)
+            nvc.modalPresentationStyle = .fullScreen
+            
+            present(nvc, animated: true)
+           
+        } else {
+            let vc = storyboard?.instantiateViewController(withIdentifier: CityDetailViewController.indentifier ) as! CityDetailViewController
+            navigationController?.pushViewController(vc, animated: true)
+        }
+        
+        
     }
 }

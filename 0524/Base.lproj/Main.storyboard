@@ -232,59 +232,59 @@
             </objects>
             <point key="canvasLocation" x="4747" y="217"/>
         </scene>
-        <!--View Controller-->
+        <!--City Detail View Controller-->
         <scene sceneID="16U-61-Apg">
             <objects>
-                <viewController id="1qN-Xv-CRX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CityDetailViewController" id="1qN-Xv-CRX" customClass="CityDetailViewController" customModule="_524" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vjt-kD-Eev">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdp-6b-4ze">
-                                <rect key="frame" x="15" y="74" width="363" height="729"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="관광지 화면" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPG-Ad-2SB">
+                                <rect key="frame" x="128.33333333333331" y="408" width="136.33333333333331" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ZJA-wY-ER2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="kdp-6b-4ze" firstAttribute="leading" secondItem="ZJA-wY-ER2" secondAttribute="leading" constant="15" id="477-fJ-gEB"/>
-                            <constraint firstItem="kdp-6b-4ze" firstAttribute="top" secondItem="ZJA-wY-ER2" secondAttribute="top" constant="15" id="D0H-re-vS0"/>
-                            <constraint firstItem="ZJA-wY-ER2" firstAttribute="trailing" secondItem="kdp-6b-4ze" secondAttribute="trailing" constant="15" id="EPF-HS-Zyq"/>
-                            <constraint firstItem="ZJA-wY-ER2" firstAttribute="bottom" secondItem="kdp-6b-4ze" secondAttribute="bottom" constant="15" id="oJ6-ae-OGA"/>
+                            <constraint firstItem="WPG-Ad-2SB" firstAttribute="centerX" secondItem="vjt-kD-Eev" secondAttribute="centerX" id="nt3-aJ-VLG"/>
+                            <constraint firstItem="WPG-Ad-2SB" firstAttribute="centerY" secondItem="vjt-kD-Eev" secondAttribute="centerY" id="uao-MB-PbO"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dQF-t4-cn3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6665" y="-28"/>
+            <point key="canvasLocation" x="5618" y="975"/>
         </scene>
-        <!--View Controller-->
+        <!--Ad Detail View Controller-->
         <scene sceneID="w6Y-O1-2wb">
             <objects>
-                <viewController id="bcd-kM-LjG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdDetailViewController" id="bcd-kM-LjG" customClass="AdDetailViewController" customModule="_524" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xHi-gx-LF5">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yKi-Bn-zlk">
-                                <rect key="frame" x="15" y="74" width="363" height="729"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="광고 화면" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="em1-Xf-GDa">
+                                <rect key="frame" x="141.33333333333334" y="408" width="110.33333333333334" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ibd-IO-W4V"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ibd-IO-W4V" firstAttribute="trailing" secondItem="yKi-Bn-zlk" secondAttribute="trailing" constant="15" id="3Ue-lw-xbK"/>
-                            <constraint firstItem="yKi-Bn-zlk" firstAttribute="top" secondItem="ibd-IO-W4V" secondAttribute="top" constant="15" id="Vx7-p1-jH2"/>
-                            <constraint firstItem="yKi-Bn-zlk" firstAttribute="leading" secondItem="ibd-IO-W4V" secondAttribute="leading" constant="15" id="dzA-Ct-GqF"/>
-                            <constraint firstItem="ibd-IO-W4V" firstAttribute="bottom" secondItem="yKi-Bn-zlk" secondAttribute="bottom" constant="15" id="obn-Qx-AUj"/>
+                            <constraint firstItem="em1-Xf-GDa" firstAttribute="centerY" secondItem="xHi-gx-LF5" secondAttribute="centerY" id="B2L-zN-g8b"/>
+                            <constraint firstItem="em1-Xf-GDa" firstAttribute="centerX" secondItem="xHi-gx-LF5" secondAttribute="centerX" id="ePt-bQ-RJj"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prd-4c-pty" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7644" y="-28"/>
+            <point key="canvasLocation" x="6486" y="975"/>
         </scene>
         <!--도시 상세 정보-->
         <scene sceneID="YXc-AI-E9H">
@@ -586,12 +586,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

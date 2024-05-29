@@ -16,6 +16,8 @@
 		B01C97852C021E6E003C2368 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B01C97842C021E6E003C2368 /* Base */; };
 		B01C978D2C021FC4003C2368 /* ShopingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C978C2C021FC4003C2368 /* ShopingListTableViewCell.swift */; };
 		B01C978F2C021FD9003C2368 /* ShopingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01C978E2C021FD9003C2368 /* ShopingListTableViewController.swift */; };
+		B0396AE82C06E9E7007DDABB /* CityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0396AE72C06E9E7007DDABB /* CityDetailViewController.swift */; };
+		B0396AEA2C06EA5B007DDABB /* AdDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0396AE92C06EA5B007DDABB /* AdDetailViewController.swift */; };
 		B08B04C92C02468A00467831 /* TravelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B04C82C02468A00467831 /* TravelTableViewController.swift */; };
 		B08B04CB2C02469A00467831 /* TravelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B08B04CA2C02469A00467831 /* TravelTableViewCell.swift */; };
 		B08B04CE2C024BE800467831 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = B08B04CD2C024BE800467831 /* Kingfisher */; };
@@ -43,6 +45,8 @@
 		B01C97862C021E6E003C2368 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B01C978C2C021FC4003C2368 /* ShopingListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopingListTableViewCell.swift; sourceTree = "<group>"; };
 		B01C978E2C021FD9003C2368 /* ShopingListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopingListTableViewController.swift; sourceTree = "<group>"; };
+		B0396AE72C06E9E7007DDABB /* CityDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityDetailViewController.swift; sourceTree = "<group>"; };
+		B0396AE92C06EA5B007DDABB /* AdDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdDetailViewController.swift; sourceTree = "<group>"; };
 		B08B04C82C02468A00467831 /* TravelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewController.swift; sourceTree = "<group>"; };
 		B08B04CA2C02469A00467831 /* TravelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelTableViewCell.swift; sourceTree = "<group>"; };
 		B0B85E512C02F8ED00889951 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
@@ -153,6 +157,8 @@
 				B0EDFEB82C04756000EBBB79 /* CityTableViewCell.xib */,
 				B0EDFEBD2C0485D200EBBB79 /* ADTableViewCell.swift */,
 				B0EDFEBE2C0485D200EBBB79 /* ADTableViewCell.xib */,
+				B0396AE72C06E9E7007DDABB /* CityDetailViewController.swift */,
+				B0396AE92C06EA5B007DDABB /* AdDetailViewController.swift */,
 			);
 			name = "인기 도시";
 			path = "인기 도시";
@@ -240,6 +246,7 @@
 				B01C978F2C021FD9003C2368 /* ShopingListTableViewController.swift in Sources */,
 				B0EDFEB62C046F1100EBBB79 /* CityViewController.swift in Sources */,
 				B0EDFEC42C04B94300EBBB79 /* UILabel+Extension.swift in Sources */,
+				B0396AEA2C06EA5B007DDABB /* AdDetailViewController.swift in Sources */,
 				B08B04C92C02468A00467831 /* TravelTableViewController.swift in Sources */,
 				B0EDFEC02C0485D200EBBB79 /* ADTableViewCell.swift in Sources */,
 				B005B2C22C05FB920095E7DD /* MagazineInfo.swift in Sources */,
@@ -248,6 +255,7 @@
 				B08B04CB2C02469A00467831 /* TravelTableViewCell.swift in Sources */,
 				B0EDFEC22C049FFC00EBBB79 /* UIColor+Extension.swift in Sources */,
 				B01C978D2C021FC4003C2368 /* ShopingListTableViewCell.swift in Sources */,
+				B0396AE82C06E9E7007DDABB /* CityDetailViewController.swift in Sources */,
 				B0B85E522C02F8ED00889951 /* RestaurantTableViewCell.swift in Sources */,
 				B01C977D2C021E6D003C2368 /* ViewController.swift in Sources */,
 				B01C97792C021E6D003C2368 /* AppDelegate.swift in Sources */,
