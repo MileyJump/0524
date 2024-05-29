@@ -16,7 +16,7 @@ class CityDetailViewController: UIViewController {
 
         navigationController?.navigationBar.tintColor = .black
         navigationItem.backBarButtonItem?.tintColor = .black
-        navigationItem.title = "관광지 화면"
+//        navigationItem.title = "관광지 화면"
  
     }
     

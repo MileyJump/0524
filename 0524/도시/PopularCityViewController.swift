@@ -34,6 +34,7 @@ class PopularCityViewController: UIViewController {
         
         if text.isEmpty {
             filterList = list
+            tableView.reloadData()
         } else {
             for item in list {
                 if item.city_name.contains(text) {
@@ -61,7 +62,8 @@ class PopularCityViewController: UIViewController {
     func perfomDomesticSegmentAction(){
         print(#function)
         var searchlist: [City] = []
-        var segment = citySegmented.selectedSegmentIndex
+        
+        let segment = citySegmented.selectedSegmentIndex
         
         if segment == 0 {
             filterList = list

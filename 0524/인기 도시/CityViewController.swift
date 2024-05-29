@@ -83,8 +83,7 @@ extension CityViewController: UITableViewDelegate, UITableViewDataSource {
         } else {
             let vc = storyboard?.instantiateViewController(withIdentifier: CityDetailViewController.indentifier ) as! CityDetailViewController
             navigationController?.pushViewController(vc, animated: true)
+            vc.navigationItem.title = travelList[indexPath.row].title
         }
-        
-        
     }
 }
