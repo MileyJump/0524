@@ -65,6 +65,7 @@ extension CityViewController: UITableViewDelegate, UITableViewDataSource {
             cityCell.configureCell(data: travelList[indexPath.row])
             cityCell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
             cityCell.likeButton.tag = indexPath.row
+            
             return cityCell
         }
     }
@@ -76,14 +77,22 @@ extension CityViewController: UITableViewDelegate, UITableViewDataSource {
         if let ad = travelList[indexPath.row].ad, ad {
              let vc = storyboard?.instantiateViewController(withIdentifier: AdDetailViewController.indentifier) as! AdDetailViewController
             let nvc = UINavigationController(rootViewController: vc)
+            vc.data = travelList[indexPath.row]
+            
+            // AD 셀의 배경 색상을 전달
+            if let adCell = tableView.cellForRow(at: indexPath) as? ADTableViewCell {
+                vc.customColor = adCell.backgroundColor
+            }
+            
+            
             nvc.modalPresentationStyle = .fullScreen
             
             present(nvc, animated: true)
            
         } else {
             let vc = storyboard?.instantiateViewController(withIdentifier: CityDetailViewController.indentifier ) as! CityDetailViewController
+            vc.data = travelList[indexPath.row]
             navigationController?.pushViewController(vc, animated: true)
-            vc.navigationItem.title = travelList[indexPath.row].title
         }
     }
 }

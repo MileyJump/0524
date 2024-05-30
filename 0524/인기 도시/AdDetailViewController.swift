@@ -11,6 +11,10 @@ class AdDetailViewController: UIViewController {
     
     static let indentifier = "AdDetailViewController"
     
+    var data: Travel?
+    var customColor: UIColor?
+    
+    @IBOutlet var titleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,6 +24,11 @@ class AdDetailViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .black
         
         navigationItem.title = "광고 화면"
+        
+        titleLabel.text = data?.title
+        
+        view.backgroundColor = customColor
+        
     }
     
     @objc func rightButtonTapped(){

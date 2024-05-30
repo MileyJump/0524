@@ -43,7 +43,10 @@ class PopularCityViewController: UIViewController {
     func perfomDomesticSegmentAction(){
         print(#function)
         var searchlist: [City] = []
-
+        
+        print("segment: ==================\(segment)")
+        print("citySegmented.selectedSegmentIndex : \(citySegmented.selectedSegmentIndex)===============")
+//        if segment == 0 {
         if citySegmented.selectedSegmentIndex == 0 {
             print("0번 클릭")
             filterList = list
