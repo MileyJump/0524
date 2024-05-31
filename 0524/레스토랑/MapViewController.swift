@@ -20,8 +20,8 @@ class MapViewController: UIViewController {
         
         let right = UIBarButtonItem(title: "Filter", style: .plain, target: self, action: #selector(filterButtonTapped))
         navigationItem.rightBarButtonItem = right
-
-//        mapViewConfigure()
+        
+        //        mapViewConfigure()
     }
     var latitudeList: [Double] = []
     var longitudeList: [Double] = []
@@ -33,11 +33,19 @@ class MapViewController: UIViewController {
         restaurantname.removeAll()
         
         for restaurant in restaurantList {
-            if category == "전체" || restaurant.category == category {
+            if restaurant.category == category {
                 latitudeList.append(restaurant.latitude)
                 longitudeList.append(restaurant.longitude)
                 restaurantname.append(restaurant.name)
                 
+            } else if category == "전체" {
+                //                var initialRegion: MKCoordinateRegion?
+                //                initialRegion = mapView.region
+                //                if let initialRegion = initialRegion {
+                //                    mapView.setRegion(initialRegion, animated: true)
+                //                    mapView.removeAnnotations(mapView.annotations)
+                
+                print("몰라.. 어떻게 구현하는 거지")
             }
         }
         print(latitudeList, longitudeList)
@@ -72,7 +80,7 @@ class MapViewController: UIViewController {
     func mapViewConfigure() {
         
         mapView.removeAnnotations(mapView.annotations) // 기존의 어노테이션 제거
-           
+        
         for index in 0..<latitudeList.count {
             let latitude = latitudeList[index]
             let longitude = longitudeList[index]
@@ -86,9 +94,9 @@ class MapViewController: UIViewController {
             mapView.addAnnotation(annotaion)
             print("잘 되고 있군")
         }
-   print("굿")
-       }
-   }
+        print("굿")
+    }
+}
 
 
 
