@@ -13,8 +13,8 @@ class RestaurantTableViewCell: UITableViewCell {
     @IBOutlet var restaurantImageView: UIImageView!
     
     @IBOutlet var typeLabel: UILabel!
-    @IBOutlet var longitudeLabel: UILabel!
-    @IBOutlet var latitudeLabel: UILabel!
+//    @IBOutlet var longitudeLabel: UILabel!
+//    @IBOutlet var latitudeLabel: UILabel!
     @IBOutlet var phoneNumberLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!

@@ -11,7 +11,7 @@ class PopularCityViewController: UIViewController {
     
     var list = CityInfo().city
     var filterList: [City] = []
-    lazy var segment = citySegmented.selectedSegmentIndex
+    
     
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var citySegmented: UISegmentedControl!
@@ -44,9 +44,9 @@ class PopularCityViewController: UIViewController {
         print(#function)
         var searchlist: [City] = []
         
-        print("segment: ==================\(segment)")
-        print("citySegmented.selectedSegmentIndex : \(citySegmented.selectedSegmentIndex)===============")
-//        if segment == 0 {
+        
+         
+
         if citySegmented.selectedSegmentIndex == 0 {
             print("0번 클릭")
             filterList = list

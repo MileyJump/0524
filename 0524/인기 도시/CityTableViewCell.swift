@@ -9,7 +9,7 @@ import UIKit
 
 class CityTableViewCell: UITableViewCell {
     
-    static let identifier = "CityTableViewCell"
+    
  
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var descriptionLabel: UILabel!

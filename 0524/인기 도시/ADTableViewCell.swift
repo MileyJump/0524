@@ -9,7 +9,7 @@ import UIKit
 
 class ADTableViewCell: UITableViewCell {
     
-    static let identifier = "ADTableViewCell"
+    
     
     
     
