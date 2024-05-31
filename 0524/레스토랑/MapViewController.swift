@@ -70,22 +70,26 @@ class MapViewController: UIViewController {
     }
     
     func mapViewConfigure() {
-        for (latitude, longitude) in zip(latitudeList, longitudeList) {
-            let center = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-            mapView.region = MKCoordinateRegion(center: center, latitudinalMeters: 500, longitudinalMeters: 500)
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = center
-//            annotation.title = restaurantname
-            mapView.addAnnotation(annotation)
-            print("잘 되고 있군")
-//            mapView.delegate = self
-        }
-       
-        print("굿")
         
-    }
-    
-}
+        mapView.removeAnnotations(mapView.annotations) // 기존의 어노테이션 제거
+           
+        for index in 0..<latitudeList.count {
+            let latitude = latitudeList[index]
+            let longitude = longitudeList[index]
+            let name = restaurantname[index]
+            
+            let center = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            mapView.region = MKCoordinateRegion(center: center, latitudinalMeters: 700, longitudinalMeters: 700)
+            let annotaion = MKPointAnnotation()
+            annotaion.coordinate = center
+            annotaion.title = name
+            mapView.addAnnotation(annotaion)
+            print("잘 되고 있군")
+        }
+   print("굿")
+       }
+   }
+
 
 
 
